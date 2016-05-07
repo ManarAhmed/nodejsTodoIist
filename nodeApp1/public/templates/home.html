@@ -1,0 +1,36 @@
+
+ <div class="container">
+<h1 class="text-center text-warning">Todo List</h1>
+   <table  class="table table-hover ">
+  <thead>
+    <tr>
+      <th>Todos List</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr style="font-size : 24px;" ng-repeat="todo in todos">
+          <td>{{todo.text}}</td>
+          <td><button type="button" ng-click="delete(todo._id)" class="btn btn-danger">Delete</button></td>
+      </tr>
+  </tbody>
+</table>
+<div class="blog well">
+  <form class="form-horizontal" role="form" novalidate name="myForm" ng-submit='createTodo()'>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="todo">Add Todo:</label>
+    <div class="col-sm-8">
+      <input type="text" ng-model="text" class="form-control" name="text" id="todo">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Save new Todo</button>
+    </div>
+  </div>
+</form>
+</div>
+
+ </div>
